@@ -11779,7 +11779,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11813,70 +11813,6 @@ div#notebook {
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Boston housing dataset has 489 data points with 4 variables each.
-        RM  LSTAT  PTRATIO
-0    6.575   4.98     15.3
-1    6.421   9.14     17.8
-2    7.185   4.03     17.8
-3    6.998   2.94     18.7
-4    7.147   5.33     18.7
-5    6.430   5.21     18.7
-6    6.012  12.43     15.2
-7    6.172  19.15     15.2
-8    5.631  29.93     15.2
-9    6.004  17.10     15.2
-10   6.377  20.45     15.2
-11   6.009  13.27     15.2
-12   5.889  15.71     15.2
-13   5.949   8.26     21.0
-14   6.096  10.26     21.0
-15   5.834   8.47     21.0
-16   5.935   6.58     21.0
-17   5.990  14.67     21.0
-18   5.456  11.69     21.0
-19   5.727  11.28     21.0
-20   5.570  21.02     21.0
-21   5.965  13.83     21.0
-22   6.142  18.72     21.0
-23   5.813  19.88     21.0
-24   5.924  16.30     21.0
-25   5.599  16.51     21.0
-26   5.813  14.81     21.0
-27   6.047  17.28     21.0
-28   6.495  12.80     21.0
-29   6.674  11.98     21.0
-..     ...    ...      ...
-459  6.484  18.68     20.2
-460  5.304  24.91     20.2
-461  6.185  18.03     20.2
-462  6.229  13.11     20.2
-463  6.242  10.74     20.2
-464  6.750   7.74     20.2
-465  7.061   7.01     20.2
-466  5.762  10.42     20.2
-467  5.871  13.34     20.2
-468  6.312  10.58     20.2
-469  6.114  14.98     20.2
-470  5.905  11.45     20.2
-471  5.454  18.06     20.1
-472  5.414  23.97     20.1
-473  5.093  29.68     20.1
-474  5.983  18.07     20.1
-475  5.983  13.35     20.1
-476  5.707  12.01     19.2
-477  5.926  13.59     19.2
-478  5.670  17.60     19.2
-479  5.390  21.14     19.2
-480  5.794  14.10     19.2
-481  6.019  12.92     19.2
-482  5.569  15.10     19.2
-483  6.027  14.33     19.2
-484  6.593   9.67     21.0
-485  6.120   9.08     21.0
-486  6.976   5.64     21.0
-487  6.794   6.48     21.0
-488  6.030   7.88     21.0
-
-[489 rows x 3 columns]
 </pre>
 </div>
 </div>
@@ -13326,7 +13262,7 @@ enMQuKmxcczMjjgn4DpsZjXkT7bMzMzMzMxqwD+QYWZmZmZmVgMebJmZmZmZmdWAB1tmZmZmZmY1
 <p>The max-depth critera defines the maximum depth of the tree. Without the manual stopping critera nodes are expanded until all leaves are pure or until all leaves contain less than min_samples_split samples.
 In the example above with max_depth = 6 the training score starts out with a score close to 1 for few training points (0-25) and decreases slowly to a score of about 0.9 for about 250 training points. It seems that the score plateaus at this score for higher number of training points.</p>
 <p>The testing score increases steeply to 0.6 for a number of training points up to 50 and continous to grow slightly for the range between 50 (about 0.65) and 200 (about 0.75)  training points. The score seems to plateau afterwards with tiny variances (+/- about 0.2) for the rage thereafter with a slight tendency to decrease at trainging points beyond 350.</p>
-<p>Both scores show an almost constant score for an amonut of training points beyond 250. The curves converge at this point. The testing score even shows a tendency to decrease with numbers beyond 350. Therefore, adding more training points beyond that points would not benefit the model and might even have a negative effect.</p>
+<p>Both scores show an almost constant score for an amonut of training points beyond 250. The curves converge at this point. The testing score even shows a tendency to decrease with numbers beyond 350. Therefore, adding more training points beyond that points would not benefit the model.</p>
 
 </div>
 </div>
@@ -13789,7 +13725,7 @@ M8YYE1Us8RljjIkqlviMMcZElf8H6dYubCulZUUAAAAASUVORK5CYII=
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
 With a max_depth of 1 the model suffers from a high bias.
-The bias is error from erroneous assumptions in the learning algorithm. High bias can cause an algorithm to miss the relevant relations between features and target outputs (underfitting) (<a href="https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff">https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff</a>). The algorythm in the example above shows validation and training scores of 0.45 for a max_depth of 1. This indicates that the algorythm is generalizing too much and is not perceptive to the features enough.</p>
+The bias is error from erroneous assumptions in the learning algorithm. High bias can cause an algorithm to miss the relevant relations between features and target outputs (underfitting) (<a href="https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff">https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff</a>). The algorithm in the example above shows validation and training scores of 0.45 for a max_depth of 1. This indicates that the algorithm is generalizing too much and is not perceptive to the features enough.</p>
 <p>With a max_depth of 10 the model seems to suffer from a high variance. The variance is error from sensitivity to small fluctuations in the training set. High variance can cause overfitting: modeling the random noise in the training data, rather than the intended outputs (<a href="https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff">https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff</a>). The graph shows a high discrepance between training score (about 1) and validation score (about 0.7). This indicates that the model recognizes the special noise in the training data rather than making general enough predictions that are relevant for the validation data-set or any future un-seen data.</p>
 
 </div>
@@ -13811,7 +13747,7 @@ The bias is error from erroneous assumptions in the learning algorithm. High bia
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
-<p>The bias–variance tradeoff (or dilemma) is the problem of simultaneously minimizing two sources of error that prevent supervised learning algorithms from generalizing beyond their training set (<a href="https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff">https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff</a>): You want to have an algorythm that has the bias to generalize but is also perceptive to data. The validation score in the graph reaches the maximum for a max_depth of 4. This indicates that this point seems to be the optimal balance between bias and variance.</p>
+<p>The bias–variance tradeoff (or dilemma) is the problem of simultaneously minimizing two sources of error that prevent supervised learning algorithms from generalizing beyond their training set (<a href="https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff">https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff</a>): You want to have an  algorithm that has the bias to generalize but is also perceptive to data. The validation score in the graph reaches the maximum for a max_depth of 4. This indicates that this point seems to be the optimal balance between bias and variance.</p>
 
 </div>
 </div>
@@ -13842,11 +13778,26 @@ The bias is error from erroneous assumptions in the learning algorithm. High bia
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> Grid search technique is a way of systematically working through multiple combinations of parameter tunes, cross-validating as it goes to determine which tune gives the best performance (<a href="https://classroom.udacity.com/courses/ud120/lessons/2960698751/concepts/30561085470923#">https://classroom.udacity.com/courses/ud120/lessons/2960698751/concepts/30561085470923#</a>). Parameters of an algorythm can have major influence on the performance of an algorythm as we saw for example in the decision tree regressor curves above in regards to the max-depth parameter. There the performance of a single parameter setting resultet in a score between 0.4 and almost 0.8.  Another example would be the SVM algorythm with the parameters 'kernel' and 'C'. The grid search would create a 'grid' of (manually given/selected) possible choices for parameters (e.g. Kernel linear vs. Kerne 'rbf' by C for each ranging possibly from 1 - 10). Grid search can be seen as brute force attac to determine the best possible combination of parameters.</p>
-<p>The systematic grid search should give as a result of the testing and validating of each combination of parameters the combination of parameters with the best performance.</p>
+<p><strong>Answer: </strong> Grid search technique is a way of systematically working through multiple possible combinations of parameter tunes, cross-validating as it goes to determine which tune gives the best performance (<a href="https://classroom.udacity.com/courses/ud120/lessons/2960698751/concepts/30561085470923#">https://classroom.udacity.com/courses/ud120/lessons/2960698751/concepts/30561085470923#</a>).</p>
+<p>Parameters of an algorithm can have major influence on the performance of an algorithm as we saw for example in the decision tree regressor curves above in regards to the max-depth parameter. There the performance of a single parameter setting resultet in a score between 0.4 for max_depth=1 and almost 0.8 for max-depth=3. Grid search in this example would use a set of pre-defined parameters for the max_depth value (like 1-10) and test each parameter. This could be seen as grid of 1xn parameters to be tested. The test with the highest score can be taken to achieve the best performance and to detect and avoid errors like over- or underfitting.</p>
+<p>A more complex example would be the SVM algorithm which supports the parameters 'kernel' and 'C'. In order to optimize the result we'd have to test a test a 'grid' of   possible choices for those parameters (e.g. Kernel: linear vs. 'rbf' and C: range 1 - 10). We'd create a grid of 2x10 possible combinations to test. The grid search technique does this test for us and returns the combination with the best performance metric typically measured by cross-validation on a separate training set. Grid search can be seen as brute force attac to determine the best possible combination of parameters.</p>
+<p>By systematically training an classifier with different parameter settings and measuring the performance on unseen data grid search technique helps to optimize a learning algorithm.</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -13867,6 +13818,7 @@ The bias is error from erroneous assumptions in the learning algorithm. High bia
 <p><strong>Answer: </strong></p>
 <p>Cross-validation is a technique to evaluate predictive models by partitioning the original data sample into a training set to train the model, and a test set to evaluate it.</p>
 <p>In k-fold cross-validation, the original sample is randomly partitioned into k equal size subsamples. Of the k subsamples, a single subsample is retained as the validation data for testing the model, and the remaining k-1 subsamples are used as training data. The cross-validation process is then repeated k times (the folds), with each of the k subsamples used exactly once as the validation data. The k results from the folds can then be averaged (or otherwise combined) to produce a single estimation. The advantage of this method is that all observations are used for both training and validation, and each observation is used for validation exactly once (<a href="http://www.openml.org/a/estimation-procedures/1">http://www.openml.org/a/estimation-procedures/1</a>).</p>
+<p>The advantage of using k-fold cross validation alongside the grid search is to maximize not only the model for one set but also optimize for the use with new / unseen data. K-fold maximises the use of the data available for training and testing purposes. In each of the k cases we have k-1 training and one previously unseen testing data set. The combination of grid search - which iterates through different parameter settings - and k-fold cross validation - which iterates through different training/testing data combinations - allows to maximize the performance while making sure that the algorithm can react best on unseen data and is not overfittet to a special set of training/testing data.</p>
 
 </div>
 </div>
@@ -14177,7 +14129,8 @@ Range in prices: $69,044.61
 <p>Is the model robust enough to make consistent predictions?
 The fit_model function above showed for the ten runs with different training and testing sets a difference in predictions of about 70k while prices range roughly around 400k. This spread in the predictions for a specific clients based on the data it's trained on seems to be pretty significant. The model does not seem to be robust enought to truely make consistent predictions.</p>
 <p>Would data collected in an urban city like Boston be applicable in a rural city?</p>
-<p>In general prices for homes are constructed in the same way in urban cities and rural cities. People look at features like size, age, rooms, area. The general model and feature set might therefore valid in both areas. The influence on the price of each feature might highly different though. Rural areas most likely have more room available so that lot sizes and houses are bigger for example. Therefore it seems unlikely that the algorithm would be able to predict valid prices for rural areas only based on the data collected in the urban area.</p>
+<p>In general prices for homes are constructed in the same way in urban cities and rural cities. People look at features like size, age, rooms, area. The general model and feature set might therefore valid in both areas.</p>
+<p>However, the importance of each feature on the price of the house might highly different between rural and metropolitan aeras. Rural areas will most likely have larger lots due to lower land prices so that room will have a different value in the city than in rural areas. People also might not have a chance to select houses based factors like the student-teacher ratio as easily as in a urban area as there are likely much fewer schools available. On the other side other factors might be more imporant like access to general infrastructure (e.g. fast internet connection, distance to shopping centers). Those factors might be taken for granted in urban areas. Therefore it seems unlikely that the data collected in Boston would be applicable in rural areas.</p>
 <p>Should the constructed model be used in a real-world setting.</p>
 <p>The answer to the question depends on the goals of the real-world setting. It seems that the age of data, limitations in the area where it can be generalized to and the accuracy would suggest to use it with the goal to accurately predict house prices. Using the data to train ML students seems to be a very valid real-word setting for the data though.</p>
 
